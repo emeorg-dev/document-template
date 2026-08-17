@@ -10,12 +10,17 @@ Define el sistema visual común utilizado por los documentos: formato A4, tipogr
 .
 ├── assets/
 │   └── logo.svg
+├── templates/
+│   ├── definicion-producto.typ
+│   ├── diseno-plan-tecnico.typ
+│   └── ficha-oportunidad.typ
 ├── main.typ
 └── template.typ
 ```
 
-* `template.typ`: contiene las reglas y componentes visuales de la plantilla.
-* `main.typ`: punto de entrada del documento.
+* [template.typ](file:///home/michelle/GitHub/emeorg-dev/document-template/template.typ): contiene las reglas y componentes visuales de la plantilla.
+* [main.typ](file:///home/michelle/GitHub/emeorg-dev/document-template/main.typ): punto de entrada del documento básico.
+* `templates/`: plantillas específicas para distintos tipos de documentos.
 * `assets/`: recursos gráficos utilizados por la plantilla.
 
 ## Uso
@@ -96,10 +101,8 @@ typst watch main.typ
 
 ## Plantillas derivadas
 
-Esta plantilla funciona como base visual. Los distintos tipos de documento deben reutilizar `template.typ` y definir únicamente su estructura y contenido.
+Esta plantilla funciona como base visual. Los distintos tipos de documento reutilizan [template.typ](file:///home/michelle/GitHub/emeorg-dev/document-template/template.typ) y definen únicamente su estructura y contenido. Se encuentran disponibles en el directorio [templates/](file:///home/michelle/GitHub/emeorg-dev/document-template/templates):
 
-Inicialmente:
-
-* Ficha de Oportunidad
-* Definición de Producto
-* Diseño y Plan Técnico
+* **Ficha de Oportunidad**: [templates/ficha-oportunidad.typ](file:///home/michelle/GitHub/emeorg-dev/document-template/templates/ficha-oportunidad.typ)
+* **Definición de Producto**: [templates/definicion-producto.typ](file:///home/michelle/GitHub/emeorg-dev/document-template/templates/definicion-producto.typ)
+* **Diseño y Plan Técnico**: [templates/diseno-plan-tecnico.typ](file:///home/michelle/GitHub/emeorg-dev/document-template/templates/diseno-plan-tecnico.typ)
