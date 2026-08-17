@@ -439,133 +439,136 @@
   // PORTADA
   // ==========================================================================
 
-  grid(
-    columns: (1fr,),
-    rows: (
-      auto,
-      1fr,
-      auto,
-    ),
+  {
+    set par(justify: false)
+    grid(
+      columns: (1fr,),
+      rows: (
+        auto,
+        1fr,
+        auto,
+      ),
 
-    // Logo
-    [
-      #image(
-        "assets/logo.svg",
-        width: 30mm,
-      )
-    ],
+      // Logo
+      [
+        #image(
+          "assets/logo.svg",
+          width: 30mm,
+        )
+      ],
 
-    // Identidad del documento
-    [
-      #grid(
-        columns: (1fr,),
-        rows: (
-          1fr,
-          auto,
-          5fr,
-        ),
+      // Identidad del documento
+      [
+        #grid(
+          columns: (1fr,),
+          rows: (
+            1fr,
+            auto,
+            5fr,
+          ),
 
-        [],
+          [],
 
-        [
-          #grid(
-            columns: (1fr,),
-            rows: (
-              auto,
-              auto,
-              auto,
-            ),
-            row-gutter: 0.8em,
+          [
+            #grid(
+              columns: (1fr,),
+              rows: (
+                auto,
+                auto,
+                auto,
+              ),
+              row-gutter: 0.8em,
 
-            // Tipo
-            [
-              #eme-badge[
-                #upper(kind)
-              ]
-            ],
+              // Tipo
+              [
+                #eme-badge[
+                  #upper(kind)
+                ]
+              ],
 
-            // Título
-            [
-              #text(
-                size: 40pt,
-                weight: "bold",
-                tracking: -0.02em,
-                fill: ink,
-              )[
-                #title
-              ]
-            ],
-
-            // Pregunta
-            [
-              #if question != none [
+              // Título
+              [
                 #text(
-                  size: 13pt,
+                  size: 40pt,
+                  weight: "bold",
+                  tracking: -0.02em,
+                  fill: ink,
+                )[
+                  #title
+                ]
+              ],
+
+              // Pregunta
+              [
+                #if question != none [
+                  #text(
+                    size: 13pt,
+                    weight: "medium",
+                    fill: gray-dark,
+                  )[
+                    #question
+                  ]
+                ]
+              ],
+            )
+          ],
+
+          [],
+        )
+      ],
+
+      // Autores y fecha
+      [
+        #grid(
+          columns: (1fr,),
+          rows: (
+            auto,
+            auto,
+          ),
+          row-gutter: 0.8em,
+
+          [
+            #line(
+              length: 100%,
+              stroke: 0.75pt + ink,
+            )
+          ],
+
+          [
+            #grid(
+              columns: (
+                1fr,
+                auto,
+              ),
+              column-gutter: 2em,
+
+              [
+                #text(
+                  size: 8.5pt,
                   weight: "medium",
                   fill: gray-dark,
                 )[
-                  #question
+                  #format-authors(authors)
                 ]
-              ]
-            ],
-          )
-        ],
+              ],
 
-        [],
-      )
-    ],
-
-    // Autores y fecha
-    [
-      #grid(
-        columns: (1fr,),
-        rows: (
-          auto,
-          auto,
-        ),
-        row-gutter: 0.8em,
-
-        [
-          #line(
-            length: 100%,
-            stroke: 0.75pt + ink,
-          )
-        ],
-
-        [
-          #grid(
-            columns: (
-              1fr,
-              auto,
-            ),
-            column-gutter: 2em,
-
-            [
-              #text(
-                size: 8.5pt,
-                weight: "medium",
-                fill: gray-dark,
-              )[
-                #format-authors(authors)
-              ]
-            ],
-
-            [
-              #align(right)[
-                #text(
-                  size: 8.5pt,
-                  weight: "regular",
-                  fill: gray-mid,
-                )[
-                  #date
+              [
+                #align(right)[
+                  #text(
+                    size: 8.5pt,
+                    weight: "regular",
+                    fill: gray-mid,
+                  )[
+                    #date
+                  ]
                 ]
-              ]
-            ],
-          )
-        ],
-      )
-    ],
-  )
+              ],
+            )
+          ],
+        )
+      ],
+    )
+  }
 
 
   // ==========================================================================
