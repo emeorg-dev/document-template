@@ -7,10 +7,10 @@
 // PALETA
 // ----------------------------------------------------------------------------
 
-#let ink        = luma(20)
-#let gray-dark  = luma(60)
-#let gray-mid   = luma(140)
-#let gray-light = luma(205)
+#let ink        = luma(0)   // 100% Negro sólido para máxima nitidez de texto impreso
+#let gray-dark  = luma(80)  // ~68% Negro para subtítulos
+#let gray-mid   = luma(120) // ~53% Negro para metadatos (encabezados/pies) legibles a tamaño pequeño
+#let gray-light = luma(200) // ~22% Negro para líneas divisorias sutiles
 
 
 // ----------------------------------------------------------------------------
@@ -79,12 +79,15 @@
 // DOCUMENTO
 // ----------------------------------------------------------------------------
 
+#let unnumbered-h1(body) = heading(level: 1, numbering: none, body)
+
 #let eme-doc(
   kind: "Documento",
   title: "Sin título",
   question: none,
   authors: (),
   date: "—",
+  justify: false,
   body,
 ) = {
 
@@ -185,10 +188,11 @@
     weight: "regular",
     lang: "es",
     fill: ink,
+    hyphenate: justify,
   )
 
   set par(
-    justify: false,
+    justify: justify,
     leading: 0.68em,
     spacing: 1em,
   )
@@ -199,42 +203,58 @@
   // ==========================================================================
 
   set heading(
-    numbering: none,
+    numbering: "1.",
   )
 
   // H1
   show heading.where(level: 1): it => {
-    section-counter.step()
+    if it.numbering == none {
+      block(
+        above: 2.2em,
+        below: 0.9em,
+      )[
+        #text(
+          size: 20pt,
+          weight: "bold",
+          tracking: -0.02em,
+          fill: ink,
+        )[
+          #it.body
+        ]
+      ]
+    } else {
+      section-counter.step()
 
-    block(
-      above: 2.2em,
-      below: 0.9em,
-    )[
-      #grid(
-        rows: (
-          auto,
-          auto,
-        ),
-        row-gutter: 6pt,
+      block(
+        above: 2.2em,
+        below: 0.9em,
+      )[
+        #grid(
+          rows: (
+            auto,
+            auto,
+          ),
+          row-gutter: 6pt,
 
-        [
-          #eme-badge[
-            SECCIÓN #context section-counter.display("01")
-          ]
-        ],
+          [
+            #eme-badge[
+              SECCIÓN #context section-counter.display("01")
+            ]
+          ],
 
-        [
-          #text(
-            size: 20pt,
-            weight: "bold",
-            tracking: -0.02em,
-            fill: ink,
-          )[
-            #it.body
-          ]
-        ],
-      )
-    ]
+          [
+            #text(
+              size: 20pt,
+              weight: "bold",
+              tracking: -0.02em,
+              fill: ink,
+            )[
+              #it.body
+            ]
+          ],
+        )
+      ]
+    }
   }
 
   // H2

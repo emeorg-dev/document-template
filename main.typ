@@ -8,4 +8,5 @@
     "Nombre del autor",
   ),
   date: "DD MES AAAA",
+  justify: true,
 )

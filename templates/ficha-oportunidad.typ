@@ -8,6 +8,7 @@
     "Nombre del autor",
   ),
   date: "DD MES AAAA",
+  justify: true,
 )
 
 = ¿Cuál es la idea?
