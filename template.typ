@@ -87,7 +87,7 @@
   question: none,
   authors: (),
   date: "—",
-  justify: false,
+  justify: true,
   body,
 ) = {
 
