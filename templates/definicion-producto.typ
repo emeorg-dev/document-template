@@ -176,50 +176,20 @@
 = Requisitos no funcionales
 
 #guidance[
-  Define las características de calidad y restricciones de funcionamiento que deberá cumplir el producto.
+  Define las características de calidad y condiciones que deberá cumplir el producto.
 ]
 
-== Rendimiento
+== RNF-001 — Nombre del requisito
 
 #guidance[
-  Establece tiempos de respuesta, capacidad, frecuencia, latencia, procesamiento u otros límites medibles.
+  Describe la característica de calidad o restricción que debe cumplir el producto.
 ]
 
-== Disponibilidad y confiabilidad
+*Categoría:* Rendimiento / Seguridad / Usabilidad / etc.
 
-#guidance[
-  Define condiciones de continuidad, tolerancia a fallos, recuperación y comportamiento esperado ante errores.
-]
+*Descripción:* el sistema deberá...
 
-== Seguridad
-
-#guidance[
-  Define las necesidades de protección, control de acceso y seguridad esperadas desde la perspectiva del producto.
-]
-
-== Usabilidad
-
-#guidance[
-  Define condiciones necesarias para que los usuarios puedan comprender y utilizar correctamente el producto.
-]
-
-== Compatibilidad
-
-#guidance[
-  Define plataformas, dispositivos, sistemas, formatos o estándares que deberá soportar.
-]
-
-== Escalabilidad
-
-#guidance[
-  Define las condiciones de crecimiento que deberá soportar cuando sean relevantes para el producto.
-]
-
-== Mantenibilidad
-
-#guidance[
-  Define condiciones importantes para permitir mantenimiento, actualización y evolución del producto.
-]
+*Criterio de aceptación:* condición medible que permita comprobar su cumplimiento.
 
 
 = Reglas de negocio
