@@ -57,7 +57,7 @@
 == Comunicación entre componentes
 
 #guidance[
-  Explica cómo intercambian información los componentes y qué mecanismos o protocolos utilizan.
+  Describe de forma general cómo se comunican los componentes, incluyendo protocolos, mecanismos y dirección del intercambio de información.
 ]
 
 == Distribución de responsabilidades
@@ -70,7 +70,7 @@
 = Diagramas y modelado
 
 #guidance[
-  Incluye los diagramas necesarios para representar de forma precisa la estructura, comportamiento y flujos de la solución. Conserva únicamente los tipos que aporten información al proyecto.
+  Representaciones visuales para la estructura, comportamiento y flujos de la solución cuando aporten claridad, sin obligar a repetir toda la explicación en texto. Conserva únicamente los tipos de diagramas que sean de utilidad.
 ]
 
 == Diagramas UML
@@ -302,7 +302,7 @@
 = Flujos técnicos
 
 #guidance[
-  Describe los flujos más importantes desde la perspectiva de los componentes técnicos involucrados.
+  Describe únicamente los procesos técnicos más importantes de extremo a extremo, indicando cómo participan los distintos componentes.
 ]
 
 == Flujo 1 — Nombre
