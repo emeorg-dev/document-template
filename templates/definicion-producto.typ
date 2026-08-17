@@ -10,29 +10,10 @@
   date: "DD MES AAAA",
 )
 
-= Visión del producto
+= Visión y objetivo
 
 #guidance[
-  Describe de forma breve qué producto se construirá, para quién existe y qué resultado busca producir.
-]
-
-
-= Objetivo
-
-#guidance[
-  Define el resultado principal que debe conseguir el producto.
-]
-
-== Objetivo del producto
-
-#guidance[
-  Describe el propósito general y el resultado que debe entregar una vez desarrollado.
-]
-
-== Objetivo del MVP
-
-#guidance[
-  Define qué debe demostrar o conseguir concretamente la primera versión funcional del producto.
+  Describe de forma breve la visión del producto (para quién existe y qué busca producir) y define sus objetivos principales (tanto a largo plazo para el producto final como para el MVP).
 ]
 
 
@@ -249,41 +230,10 @@
 ]
 
 
-= Restricciones
+= Restricciones y dependencias
 
 #guidance[
-  Documenta condiciones conocidas que limitan las posibles soluciones.
-]
-
-== Técnicas
-
-#guidance[
-  Define plataformas, dispositivos, protocolos, compatibilidad u otras restricciones técnicas obligatorias.
-]
-
-== Económicas
-
-#guidance[
-  Define límites de costo o presupuesto que condicionan el producto.
-]
-
-== Operacionales
-
-#guidance[
-  Define restricciones impuestas por el entorno real donde deberá utilizarse.
-]
-
-== Legales y regulatorias
-
-#guidance[
-  Define las obligaciones normativas que condicionan el comportamiento o alcance del producto.
-]
-
-
-= Dependencias
-
-#guidance[
-  Identifica servicios, proveedores, sistemas, hardware u otros elementos externos necesarios para el funcionamiento del producto.
+  Identifica las restricciones conocidas (técnicas, económicas, operacionales, normativas) y los elementos externos (servicios, proveedores, hardware) de los que depende el producto.
 ]
 
 

@@ -67,86 +67,10 @@
 ]
 
 
-= Diagramas y modelado
+= Diagramas
 
 #guidance[
-  Representaciones visuales para la estructura, comportamiento y flujos de la solución cuando aporten claridad, sin obligar a repetir toda la explicación en texto. Conserva únicamente los tipos de diagramas que sean de utilidad.
-]
-
-== Diagramas UML
-
-#guidance[
-  Utiliza UML para representar la estructura y comportamiento del sistema cuando corresponda.
-]
-
-=== Diagrama de casos de uso
-
-#guidance[
-  Representa actores y relaciones con las principales capacidades del sistema cuando sea útil complementar los casos de uso definidos en el producto.
-]
-
-=== Diagrama de clases
-
-#guidance[
-  Representa las clases o entidades relevantes, sus atributos, operaciones, relaciones, composición, agregación y herencia.
-]
-
-=== Diagrama de secuencia
-
-#guidance[
-  Representa el orden de interacción entre componentes, objetos, servicios o actores durante un flujo relevante.
-]
-
-=== Diagrama de actividad
-
-#guidance[
-  Representa procesos, decisiones, concurrencia y secuencias de actividades dentro de un flujo.
-]
-
-=== Diagrama de estados
-
-#guidance[
-  Representa los estados posibles de una entidad o componente y los eventos que producen sus transiciones.
-]
-
-=== Diagrama de componentes
-
-#guidance[
-  Representa los principales módulos o componentes de software y sus dependencias.
-]
-
-=== Diagrama de despliegue
-
-#guidance[
-  Representa la distribución de componentes de software sobre servidores, dispositivos, contenedores u otra infraestructura.
-]
-
-
-== Diagramas de flujo
-
-#guidance[
-  Representa algoritmos, procesos o decisiones mediante flujos cuando una secuencia resulta más clara visualmente que mediante texto.
-]
-
-
-== Diagrama entidad-relación
-
-#guidance[
-  Representa las entidades persistentes, sus atributos principales y las relaciones entre ellas.
-]
-
-
-== Diagrama de flujo de datos
-
-#guidance[
-  Representa cómo la información entra, se procesa, se almacena y sale del sistema cuando resulte relevante.
-]
-
-
-== Diagrama de arquitectura
-
-#guidance[
-  Representa la organización general de aplicaciones, servicios, infraestructura, hardware y sistemas externos.
+  Representaciones visuales que aporten claridad al diseño técnico de la solución. Incluye únicamente los diagramas que resulten necesarios y significativos para el proyecto (por ejemplo: diagramas de secuencia, casos de uso, clases, actividades, estados, componentes, despliegue, entidad-relación, flujo de datos o arquitectura general).
 ]
 
 
@@ -355,108 +279,17 @@
 ]
 
 
-= Seguridad
+= Seguridad y privacidad
 
 #guidance[
-  Define cómo se protegerán los componentes, comunicaciones, credenciales y datos de la solución.
-]
-
-== Autenticación
-
-#guidance[
-  Describe cómo se verificará la identidad de usuarios, dispositivos o servicios.
-]
-
-== Autorización
-
-#guidance[
-  Define cómo se controlará el acceso a funciones y recursos.
-]
-
-== Protección de datos
-
-#guidance[
-  Define medidas para proteger información almacenada y transmitida.
-]
-
-== Gestión de secretos
-
-#guidance[
-  Define cómo se almacenarán y utilizarán claves, tokens, certificados y credenciales.
-]
-
-== Seguridad de comunicaciones
-
-#guidance[
-  Define cifrado, certificados, protocolos seguros u otras medidas aplicables a las comunicaciones.
-]
-
-== Dependencias
-
-#guidance[
-  Define cómo se gestionarán vulnerabilidades y actualizaciones de bibliotecas, imágenes y servicios externos.
+  Define cómo se protegerán los componentes, comunicaciones, credenciales y datos de la solución (ej. autenticación, autorización, cifrado, gestión de secretos), así como el cumplimiento de los requisitos de privacidad de datos personales cuando corresponda (recopilación, almacenamiento, acceso y eliminación).
 ]
 
 
-= Privacidad
+= Observabilidad (Opcional)
 
 #guidance[
-  Define técnicamente cómo se cumplirán los requisitos de privacidad establecidos para el producto. Elimina esta sección cuando no exista tratamiento de información personal.
-]
-
-== Recopilación
-
-#guidance[
-  Define qué información personal se recopila y en qué momento.
-]
-
-== Almacenamiento
-
-#guidance[
-  Define dónde se conserva, durante cuánto tiempo y bajo qué controles.
-]
-
-== Acceso
-
-#guidance[
-  Define qué actores o componentes pueden consultar o modificar la información.
-]
-
-== Eliminación
-
-#guidance[
-  Define cómo se eliminará la información cuando corresponda.
-]
-
-
-= Observabilidad
-
-#guidance[
-  Define cómo se supervisará el funcionamiento del sistema y cómo se investigarán problemas.
-]
-
-== Logs
-
-#guidance[
-  Define qué eventos deben registrarse y qué información debe incluir cada registro.
-]
-
-== Métricas
-
-#guidance[
-  Define los indicadores técnicos necesarios para conocer rendimiento, disponibilidad y comportamiento.
-]
-
-== Alertas
-
-#guidance[
-  Define qué condiciones requieren notificación y qué información debe proporcionar cada alerta.
-]
-
-== Trazas
-
-#guidance[
-  Define mecanismos de trazabilidad entre componentes cuando sean necesarios para seguir operaciones distribuidas.
+  Define cómo se supervisará el funcionamiento del sistema en producción y cómo se investigarán los problemas (por ejemplo, mediante logs de eventos, métricas de rendimiento, alertas y trazas de ejecución).
 ]
 
 
@@ -509,186 +342,52 @@
 ]
 
 
-= Ambientes
+= Infraestructura y despliegue
 
 #guidance[
-  Define los ambientes necesarios y las diferencias de configuración entre ellos.
-]
-
-== Desarrollo
-
-#guidance[
-  Describe el ambiente utilizado durante la implementación.
-]
-
-== Pruebas
-
-#guidance[
-  Describe el ambiente utilizado para integración y validación.
-]
-
-== Producción
-
-#guidance[
-  Describe el ambiente en el que funcionará la solución utilizada por usuarios reales.
+  Define la infraestructura donde se ejecutará la solución (ambientes de desarrollo, pruebas y producción) y el proceso para automatizar las verificaciones, compilación, entrega y despliegue de los componentes (CI/CD, configuración de variables, migraciones y actualizaciones).
 ]
 
 
-= Integración y entrega continua
+= Decisiones y validaciones técnicas
 
 #guidance[
-  Define cómo se automatizarán las verificaciones, compilaciones y entregas del proyecto.
-]
-
-== Integración continua
-
-#guidance[
-  Define qué verificaciones se ejecutan ante cambios en el repositorio.
-]
-
-== Construcción
-
-#guidance[
-  Define cómo se generan los artefactos ejecutables o desplegables.
-]
-
-== Entrega
-
-#guidance[
-  Define cómo los artefactos aprobados avanzan hacia los ambientes correspondientes.
-]
-
-
-= Despliegue
-
-#guidance[
-  Describe cómo se instalarán, ejecutarán y actualizarán los componentes de la solución.
-]
-
-== Infraestructura de despliegue
-
-#guidance[
-  Define dónde se ejecutará cada componente.
-]
-
-== Configuración
-
-#guidance[
-  Define cómo se administrarán variables de ambiente, secretos y configuración específica de cada entorno.
-]
-
-== Migraciones
-
-#guidance[
-  Define cómo se aplicarán cambios de estructura o datos cuando existan sistemas persistentes.
-]
-
-== Actualizaciones
-
-#guidance[
-  Define cómo se desplegarán nuevas versiones.
-]
-
-== Reversión
-
-#guidance[
-  Define cómo se restaurará una versión anterior cuando un despliegue no pueda mantenerse.
-]
-
-
-= Decisiones técnicas
-
-#guidance[
-  Documenta las decisiones de arquitectura o implementación que tienen impacto relevante sobre la solución.
+  Documenta las decisiones de diseño o arquitectura que tienen un impacto relevante en la solución, así como los experimentos, pruebas de concepto o validaciones que las respaldan.
 ]
 
 == DT-01 — Nombre de la decisión
 
-*Contexto:* describe la situación que requería una decisión.
+*Contexto:* descripción del problema o situación que requería una decisión.
 
-*Alternativas:* resume las opciones evaluadas.
+*Alternativas:* opciones evaluadas.
 
-*Decisión:* indica la alternativa seleccionada.
+*Decisión y justificación:* alternativa seleccionada y por qué.
 
-*Justificación:* explica por qué fue seleccionada.
+*Consecuencias:* efectos, ventajas y compromisos introducidos.
 
-*Consecuencias:* describe los efectos, ventajas y compromisos introducidos por la decisión.
+== Validación 01 — Nombre de la validación
 
+*Objetivo:* aspecto técnico a comprobar.
 
-= Validaciones técnicas
+*Método:* cómo se realizó la prueba o experimento.
 
-#guidance[
-  Documenta pruebas de concepto, experimentos o evaluaciones ya realizadas que respaldan decisiones importantes del diseño.
-]
-
-== Validación 1 — Nombre
-
-*Objetivo:* aspecto técnico que se necesitaba comprobar.
-
-*Método:* forma en que se realizó la prueba o evaluación.
-
-*Resultado:* evidencia obtenida.
-
-*Conclusión:* decisión técnica respaldada por el resultado.
+*Resultado y conclusión:* evidencia obtenida y decisión respaldada.
 
 
-= Desglose del trabajo
+= Plan de implementación
 
 #guidance[
-  Divide la construcción del MVP en entregables concretos y suficientemente pequeños para organizar su implementación.
+  Define la estrategia para construir el MVP estructurada en entregables concretos, su orden de implementación/dependencias, y las estimaciones asociadas (tiempo, costos y recursos necesarios).
 ]
 
-== Entregable 1 — Nombre
+== Entregable 1 — Nombre del entregable
 
 #guidance[
-  Describe qué debe quedar completamente implementado al finalizar este entregable.
+  Describe qué debe quedar completamente operativo al finalizar este entregable y las tareas asociadas.
 ]
 
-- Tarea.
-- Tarea.
-- Tarea.
-
-== Entregable 2 — Nombre
-
-#guidance[
-  Describe qué debe quedar completamente implementado al finalizar este entregable.
-]
-
-- Tarea.
-- Tarea.
-- Tarea.
-
-
-= Orden de implementación
-
-#guidance[
-  Define la secuencia en que se desarrollarán los entregables considerando sus dependencias técnicas.
-]
-
-
-= Estimaciones
-
-#guidance[
-  Estima los recursos necesarios para completar la implementación del MVP.
-]
-
-== Tiempo
-
-#guidance[
-  Estima el esfuerzo o duración de los principales entregables.
-]
-
-== Costos
-
-#guidance[
-  Estima los gastos asociados a desarrollo, infraestructura, servicios, licencias y hardware.
-]
-
-== Recursos
-
-#guidance[
-  Identifica personas, herramientas, equipamiento e infraestructura necesarios durante el desarrollo.
-]
+- Tarea 1.
+- Tarea 2.
 
 
 = Riesgos técnicos
