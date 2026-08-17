@@ -168,7 +168,7 @@
             fill: gray-mid,
           )[
             #counter(page).display(
-              "01 / 01",
+              "1 / 1",
               both: true,
             )
           ]
@@ -238,7 +238,7 @@
 
           [
             #eme-badge[
-              SECCIÓN #context section-counter.display("01")
+              SECCIÓN #context section-counter.display("1")
             ]
           ],
 
