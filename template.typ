@@ -7,10 +7,10 @@
 // PALETA
 // ----------------------------------------------------------------------------
 
-#let ink        = luma(0)   // 100% Negro sólido para máxima nitidez de texto impreso
-#let gray-dark  = luma(80)  // ~68% Negro para subtítulos
-#let gray-mid   = luma(120) // ~53% Negro para metadatos (encabezados/pies) legibles a tamaño pequeño
-#let gray-light = luma(200) // ~22% Negro para líneas divisorias sutiles
+#let ink        = luma(0)   // Texto
+#let gray-dark  = luma(80)  // Subtítulos
+#let gray-mid   = luma(120) // Metadatos
+#let gray-light = luma(200) // Divisores
 
 
 // ----------------------------------------------------------------------------
