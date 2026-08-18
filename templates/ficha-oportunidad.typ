@@ -145,33 +145,19 @@
 ]
 
 
-= ¿Es técnicamente viable?
+
+= ¿Cómo funcionaría en la práctica?
 
 #guidance[
-  Describe si existen las tecnologías, conocimientos y capacidades necesarias para construir y operar la solución, incluyendo las validaciones o pruebas de concepto ya realizadas.
+  Explica cómo se utilizaría la solución en condiciones reales: quiénes participarían, qué pasos seguirían, cómo se integraría al proceso actual y qué cambios, controles o mantenimiento serían necesarios.
 ]
 
 
-= ¿Es económicamente viable?
+= ¿Qué aspectos legales deben considerarse en Chile?
 
 #guidance[
-  Estima los costos necesarios para construir (inversión inicial) y operar la solución (costos recurrentes), comparándolos con el valor económico o ahorro que podría generar.
+  Identifica las leyes, normativas, permisos y obligaciones que podrían aplicarse en Chile. Considera la seguridad, la privacidad y protección de datos, la propiedad intelectual, los contratos y las licencias, e indica qué aspectos deben confirmarse con especialistas o autoridades.
 ]
-
-
-= ¿Es operacionalmente viable?
-
-#guidance[
-  Describe el entorno de operación real y cómo se integraría la solución en el proceso actual, detallando los cambios necesarios y las necesidades de mantenimiento.
-]
-
-
-= ¿Es legal y regulatoriamente viable?
-
-#guidance[
-  Identifica las normativas, leyes, propiedad intelectual, contratos, licencias y obligaciones de privacidad aplicables a la solución.
-]
-
 
 = ¿Qué recursos requiere?
 
