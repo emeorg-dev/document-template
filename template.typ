@@ -489,10 +489,11 @@
               // Título
               [
                 #set text(hyphenate: false)
+                #set par(leading: 0.5em)
+
                 #text(
                   size: 40pt,
                   weight: "bold",
-                  tracking: -0.02em,
                   fill: ink,
                 )[
                   #title
