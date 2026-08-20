@@ -26,7 +26,7 @@
 == Evidencia del problema
 
 #guidance[
-  Presenta datos, observaciones, entrevistas, antecedentes u otras fuentes que permitan demostrar que el problema existe.
+  Presenta datos, observaciones, entrevistas, antecedentes u otras fuentes que permitan demostrar que el problema existe. Cita cada fuente junto a la información que respalda y diferencia los casos observados de las conclusiones generales.
 ]
 
 == Impacto del problema
@@ -91,7 +91,23 @@
 = ¿Qué alternativas existen?
 
 #guidance[
-  Describe y compara las principales alternativas existentes (directas o indirectas) para resolver total o parcialmente el mismo problema. Se recomienda compararlas detalladamente utilizando una tabla.
+  Identifica y compara las principales alternativas directas o indirectas para resolver total o parcialmente el mismo problema. Cita la fuente utilizada para describir cada alternativa. Si no se identifican alternativas, indícalo expresamente sin inventar opciones.
+]
+
+#block[
+  #table(
+    columns: (1.2fr, 1.7fr, 1.7fr),
+    inset: 5pt,
+    align: top,
+
+    [*Alternativa*],
+    [*Funcionamiento*],
+    [*Limitaciones*],
+
+    [#guidance[Nombre de la alternativa]],
+    [#guidance[Cómo funciona]],
+    [#guidance[Principales limitaciones]],
+  )
 ]
 
 
@@ -110,7 +126,7 @@
 == Tamaño y alcance
 
 #guidance[
-  Dimensiona la oportunidad utilizando datos disponibles sobre cantidad de clientes, instalaciones, operaciones, mercado u otras medidas relevantes.
+  Dimensiona la oportunidad utilizando datos disponibles sobre cantidad de clientes, instalaciones, operaciones, mercado u otras medidas relevantes. Cita las fuentes y aclara qué representa cada cifra y cuáles son sus límites.
 ]
 
 == Necesidad de la solución
@@ -141,9 +157,8 @@
 == Precio y referencias
 
 #guidance[
-  Presenta referencias de mercado, costos, disposición a pagar u otros antecedentes utilizados para establecer un rango razonable de precio.
+  Presenta referencias de mercado, costos, disposición a pagar u otros antecedentes utilizados para establecer un rango razonable de precio. Indica la moneda, la fecha, la fuente y qué incluye cada valor.
 ]
-
 
 
 = ¿Cómo funcionaría en la práctica?
@@ -156,32 +171,84 @@
 = ¿Qué aspectos legales deben considerarse en Chile?
 
 #guidance[
-  Identifica las leyes, normativas, permisos y obligaciones que podrían aplicarse en Chile. Considera la seguridad, la privacidad y protección de datos, la propiedad intelectual, los contratos y las licencias, e indica qué aspectos deben confirmarse con especialistas o autoridades.
+  Identifica las leyes, reglamentos, normas y artículos que podrían aplicarse en Chile. Resume únicamente lo relevante para la idea y cita cada fuente oficial. Considera seguridad, privacidad y protección de datos, propiedad intelectual, contratos y licencias. Distingue lo que establece la norma de las recomendaciones o conclusiones propias.
 ]
+
+#block[
+  #table(
+    columns: (1.35fr, 2.65fr),
+    inset: 5pt,
+    align: top,
+
+    [*Norma aplicable*],
+    [*Contenido relevante para la propuesta*],
+
+    [#guidance[Materia, norma y artículos]],
+    [#guidance[Resumen de lo que establece la norma para esta idea]],
+  )
+]
+
 
 = ¿Qué recursos requiere?
 
 #guidance[
-  Identifica los recursos necesarios para el desarrollo y operación (personas/conocimientos, hardware, software, servicios e infraestructura).
+  Identifica las etapas necesarias para validar, implementar y operar la idea, indicando qué recursos, información, infraestructura, personas o condiciones se requieren en cada una. Las etapas deben adaptarse a las características de la idea.
 ]
 
+#block[
+  #table(
+    columns: (1fr, 3fr),
+    inset: 5pt,
+    align: top,
 
-= ¿De qué depende?
+    [*Etapa*],
+    [*Qué se requiere*],
 
-#guidance[
-  Identifica las dependencias críticas externas del proyecto (proveedores, disponibilidad de recursos o suministro).
+    [#guidance[Nombre de la etapa]],
+    [#guidance[Recursos y condiciones necesarios]],
+  )
 ]
 
 
 = ¿Cuáles son los principales riesgos?
 
 #guidance[
-  Identifica los riesgos conocidos (técnicos, comerciales, operacionales o externos) que podrían afectar al proyecto, y define las medidas para reducir su probabilidad o impacto.
+  Identifica los riesgos conocidos —técnicos, comerciales, operacionales o externos— que podrían afectar al proyecto y define medidas concretas para reducir su probabilidad o impacto.
+]
+
+#block[
+  #table(
+    columns: (1.3fr, 1.7fr, 2fr),
+    inset: 5pt,
+    align: top,
+
+    [*Riesgo*],
+    [*Posible consecuencia*],
+    [*Medidas para reducirlo*],
+
+    [#guidance[Nombre del riesgo]],
+    [#guidance[Qué podría ocurrir]],
+    [#guidance[Cómo reducir su probabilidad o impacto]],
+  )
 ]
 
 
 = Conclusión
 
 #guidance[
-  Sintetiza la evidencia obtenida sobre el problema, mercado, solución, viabilidad, costos y riesgos, dejando fundamentada la oportunidad evaluada.
+  Sintetiza la evidencia obtenida sobre el problema, el mercado, la solución, el modelo económico, los aspectos legales, los recursos y los riesgos. Responde si vale la pena continuar con la idea, bajo qué condiciones y cuál debería ser el siguiente paso.
 ]
+
+
+#pagebreak()
+#heading(numbering: none)[Referencias]
+
+#guidance[
+  Registra las fuentes en el archivo `references.bib`. Las referencias citadas en el documento aparecerán automáticamente en esta sección.
+]
+
+#bibliography(
+  "../references.bib",
+  style: "apa",
+  title: none,
+)
