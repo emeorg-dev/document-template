@@ -488,6 +488,7 @@
 
               // Título
               [
+                #set text(hyphenate: false)
                 #text(
                   size: 40pt,
                   weight: "bold",
