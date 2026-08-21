@@ -36,15 +36,44 @@
 
 
 // ----------------------------------------------------------------------------
+// ESTADO
+// ----------------------------------------------------------------------------
+
+#let show-guidance-state = state("emeorg-show-guidance", true)
+
+
+// ----------------------------------------------------------------------------
 // INSTRUCCIONES
 // ----------------------------------------------------------------------------
 
-#let guidance(content) = text(
-  size: 9pt,
-  fill: gray-mid,
-  style: "italic",
+#let guidance(content) = context {
+  if show-guidance-state.get() {
+    text(
+      size: 9pt,
+      fill: gray-mid,
+      style: "italic",
+    )[
+      #content
+    ]
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// ANOTACIONES
+// ----------------------------------------------------------------------------
+
+#let eme-note(title: "Nota", content) = block(
+  width: 100%,
+  above: 0.8em,
+  below: 0.8em,
+  inset: (x: 12pt, y: 10pt),
+  stroke: (left: 2.5pt + ink),
+  fill: luma(248),
 )[
-  #content
+  #text(size: 9pt, weight: "semibold", fill: ink)[#title]
+  #v(4pt)
+  #text(size: 9.5pt, weight: "regular", fill: gray-dark)[#content]
 ]
 
 
@@ -88,10 +117,13 @@
   authors: (),
   date: "—",
   justify: true,
+  toc: false,
+  show-guidance: true,
   body,
 ) = {
 
   section-counter.update(0)
+  show-guidance-state.update(show-guidance)
 
 
   // ==========================================================================
@@ -197,6 +229,18 @@
     spacing: 1em,
   )
 
+  set list(
+    indent: 0.4em,
+    body-indent: 0.5em,
+    spacing: 0.65em,
+  )
+
+  set enum(
+    indent: 0.4em,
+    body-indent: 0.5em,
+    spacing: 0.65em,
+  )
+
 
   // ==========================================================================
   // TÍTULOS
@@ -281,7 +325,7 @@
       below: 0.5em,
     )[
       #text(
-        size: 11pt,
+        size: 11.5pt,
         weight: "medium",
         fill: gray-dark,
       )[
@@ -578,6 +622,17 @@
   // ==========================================================================
 
   pagebreak()
+
+  if toc {
+    unnumbered-h1[Contenido]
+
+    outline(
+      title: none,
+      indent: 1.2em,
+    )
+
+    pagebreak()
+  }
 
   body
 }

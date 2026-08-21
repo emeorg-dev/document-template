@@ -236,12 +236,11 @@
 = Conclusión
 
 #guidance[
-  Sintetiza la evidencia obtenida sobre el problema, el mercado, la solución, el modelo económico, los aspectos legales, los recursos y los riesgos. Responde si vale la pena continuar con la idea, bajo qué condiciones y cuál debería ser el siguiente paso.
+  Sintetiza los principales antecedentes obtenidos sobre el problema, el mercado, la solución, los costos y los riesgos. Distingue entre los aspectos respaldados por evidencia, los supuestos y aquello que todavía no ha sido validado, sin decidir si la idea debe continuar o descartarse.
 ]
 
 
 #pagebreak()
-#heading(numbering: none)[Referencias]
 
 #guidance[
   Registra las fuentes en el archivo `references.bib`. Las referencias citadas en el documento aparecerán automáticamente en esta sección.
@@ -250,5 +249,5 @@
 #bibliography(
   "../references.bib",
   style: "apa",
-  title: none,
+  title: "Referencias",
 )
